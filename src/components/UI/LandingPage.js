@@ -2,6 +2,7 @@ import React from 'react';
 import './LandingPage.css';
 import { Typography, Button, Card, CardActions, CardContent, CardMedia,CssBaseline } from '@material-ui/core';
 import Collection from './Collection';
+import WomenSection from './WomenSection';
 
 const LandingPage = () => {
   return(
@@ -67,6 +68,7 @@ const LandingPage = () => {
 
         </div>
         <Collection/>
+        <WomenSection/>
 
     </div>
   </>
