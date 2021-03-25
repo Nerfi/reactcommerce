@@ -1,18 +1,18 @@
 .landingPageContainer {
-  margin-top: 100px;
+  margin-top: 140px;
   height: 100vh;
   position: relative;
-
+  /*border-style: dashed; */
 }
 
 /* cemtering the img to the center of the page */
-
 .banner {
     position: relative;
    display: flex;
    justify-content: center;
    align-self: center;
-   margin-top: 60px;
+   /*border-style: dotted; */
+   margin-bottom: 20px;
 }
 
 
@@ -28,6 +28,50 @@
   top: 1.5rem;
   max-width: initial;
   width: 275px;
-
   transform: rotate(310deg);
 }
+
+
+
+.landingPageData {
+ /* border-style: dotted;*/
+
+}
+
+
+.homeNew {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.homeTitle {
+  font-size: 45px;
+  margin-bottom: 35px
+ }
+
+.homesDescription{
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+/* check this out later on , not working at first
+.landingButton {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 1.25rem 2rem;
+  border-radius: .5rem;
+}
+*/
+
+.sectionTitle {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  text-decoration: underline;
+
+}
+
+
+
