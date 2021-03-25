@@ -38,7 +38,7 @@ const NavBar = () => {
           </div>
           <div>
             aqui va el ShoppingCart
-            recordar hacer flex en todas estas vainas
+
           </div>
           </div>
         </Toolbar>
