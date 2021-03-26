@@ -26,20 +26,22 @@ const Collection = () => {
   },[]);
 
 //console.log({collection.data.media.source[0]})
-  console.log(collection.data?.map(i => i.assets))
-  const classes  = {
+    const classes  = {
     media: {
       height: 260
+    },
+    cartItem: {
+      backgroundColor: 'red'
     }
   }
   return(
     <>
     <CssBaseline/>
     <div className="collectionContainer">
-    {collection?.data?.map(item => {
+    {collection.data?.map(item => {
 
       return(
-        <Card className="cart-item">
+        <Card className={classes.cartItem}>
       <CardMedia className={classes.media} image={item?.media.source} src={item.assets?.url} title={item.name} />
               <CardContent className={"classes.cardContent"}>
                 <Typography variant="h7" className={"classes.typography"}>{item.name}</Typography>

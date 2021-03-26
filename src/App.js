@@ -9,9 +9,9 @@ function App() {
   return (
    <>
    <Router>
+     <NavBar/>
    <CommerceContext>
 
-     <NavBar/>
       <Switch>
       <Route path="/" component={LandingPage}></Route>
 
