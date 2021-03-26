@@ -1,3 +1,12 @@
+
 .collectionContainer {
+  margin-top: 30px;
+
+}
+
+.collectionTitle {
+   display: flex;
+  justify-content: center;
   margin-top: 20px;
+  text-decoration: underline;
 }

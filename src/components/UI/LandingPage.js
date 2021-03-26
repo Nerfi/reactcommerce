@@ -4,6 +4,7 @@ import { Typography, Button, Card, CardActions, CardContent, CardMedia,CssBaseli
 import Collection from './Collection';
 import WomenSection from './WomenSection';
 import {CommerceContextAPI} from '../commerce/commerce';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 const LandingPage = () => {
   const [items, setItems] = useState([]);
@@ -53,6 +54,9 @@ const LandingPage = () => {
                 <div className="buttons">
                   <Typography>&nbsp;{item.quantity}&nbsp;</Typography>
                 </div>
+              <div style={{display: 'flex', margin: '10px', padding: '10px'}}>
+                <h3 >Add To Cart <ArrowForwardIcon style={{position: 'relative', top: '5.5px'}}/> </h3>
+              </div>
                 <Button variant="contained" type="button" color="secondary" onClick={""/*() => handleRemoveFromCart(item.id)*/}>See Product</Button>
               </CardActions>
            </Card>

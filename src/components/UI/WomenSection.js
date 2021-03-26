@@ -5,7 +5,7 @@ import { Typography, Button, Card, CardActions, CardContent, CardMedia,CssBaseli
 const WomenSection = () => {
   return(
     <>
-    Igual que en featured !
+    <h3>Womens Collection</h3>
     </>
   )
 };
