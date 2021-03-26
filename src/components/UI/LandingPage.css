@@ -55,15 +55,6 @@
   margin-bottom: 30px;
   font-size: 25px;
 }
-/* check this out later on , not working at first
-.landingButton {
-  background-color: black;
-  color: white;
-  display: inline-block;
-  padding: 1.25rem 2rem;
-  border-radius: .5rem;
-}
-*/
 
 .sectionTitle {
   display: flex;
@@ -75,3 +66,26 @@
 
 
 
+/* styles from ecommerce */
+
+.media {
+  height: 260px;
+}
+
+.cardContent {
+  display: flex;
+  justify-content:  space-between;
+}
+
+.cardActions {
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.typography {
+  font-family: sans-serif;
+}

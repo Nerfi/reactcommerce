@@ -27,6 +27,11 @@ const Collection = () => {
 
 //console.log({collection.data.media.source[0]})
   console.log(collection.data?.map(i => i.assets))
+  const classes  = {
+    media: {
+      height: 260
+    }
+  }
   return(
     <>
     <CssBaseline/>
@@ -35,8 +40,7 @@ const Collection = () => {
 
       return(
         <Card className="cart-item">
-      <CardMedia className={"classes.media"} image={item?.assets.url} src={item.assets?.url} title={item.name} />
-      <img src={item.media?.source } alt=""/>
+      <CardMedia className={classes.media} image={item?.media.source} src={item.assets?.url} title={item.name} />
               <CardContent className={"classes.cardContent"}>
                 <Typography variant="h7" className={"classes.typography"}>{item.name}</Typography>
                 <Typography variant="h5">{item.price.formatted_with_symbol}</Typography>
