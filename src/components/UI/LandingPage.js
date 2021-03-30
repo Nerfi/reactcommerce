@@ -56,7 +56,7 @@ const LandingPage = () => {
                 </div>
               <div style={{display: 'flex', margin: '10px', padding: '10px'}}>
                 <h3 >Add To Cart <ArrowForwardIcon style={{position: 'relative', top: '5.5px'}}/> </h3>
-              </div>
+                </div>
                 <Button variant="contained" type="button" color="secondary" onClick={""/*() => handleRemoveFromCart(item.id)*/}>See Product</Button>
               </CardActions>
            </Card>

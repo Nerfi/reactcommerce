@@ -13,12 +13,20 @@ const CommerceContext = (props) =>{
   //commerce instance
   const commerce = new Commerce(process.env.REACT_APP_COMMERCE_API, true);
 
+
+
   const fetchProducts = async () => {
     return commerce.products.list();
   };
 
+  const fetchSingleItem = (itemId) => {
+   return commerce.products.retrieve(itemId);
+
+  }
+
   const values = {
-    fetchProducts
+    fetchProducts,
+    fetchSingleItem
   }
 
 

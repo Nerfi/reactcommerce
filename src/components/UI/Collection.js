@@ -3,12 +3,14 @@ import { Typography, Button, Card, CardActions, CardContent, CardMedia,CssBaseli
 import './Collection.css';
 import {CommerceContextAPI} from '../commerce/commerce';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import {Link } from 'react-router-dom';
 
 const Collection = () => {
 
   const [collection, setCollection] = useState([]);
   const [error, setError] = useState(null);
   const {fetchProducts} = useContext(CommerceContextAPI);
+
 
   useEffect(() => {
 
@@ -39,7 +41,9 @@ const Collection = () => {
        <Card className="cart-itemm" >
               <CardMedia image={item.media?.source}  alt={item.name} className="media" />
               <CardContent className="cardContent">
-                <Typography variant="h7" className="typography">{item.name}</Typography>
+                <Typography variant="h7" className="typography">
+                 <Link to={`/item/${item.id}`} style={{textDecoration: 'none', color: 'black'}}>{item.name}</Link>
+                </Typography>
                 <Typography variant="h5">{item.line_total?.formatted_with_symbol}</Typography>
                <Typography dangerouslySetInnerHTML={{ __html: item.description }} className="typography" variant="body2" color="textSecondary" component="p" />
 
