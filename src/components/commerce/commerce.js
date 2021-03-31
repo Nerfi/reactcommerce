@@ -38,6 +38,11 @@ const CommerceContext = (props) =>{
      return setCart(item.cart);
   };
 
+
+  useEffect(() => {
+    fetchCart();
+  },[]);
+
   const values = {
     fetchProducts,
     fetchSingleItem,

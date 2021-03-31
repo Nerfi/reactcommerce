@@ -15,7 +15,7 @@ const NavBar = () => {
  // const { cart } = useContext(CommerceContextAPI); //not working
 
   const cart  = {
-    total_items: '5'
+    total_items: 8
   }
 
 
