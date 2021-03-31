@@ -24,9 +24,25 @@ const CommerceContext = (props) =>{
 
   }
 
+
+  //creating a cart
+  const fetchCart = async () => {
+    return setCart(await commerce.cart.retrieve());
+  };
+
+
+
+    //handle add to cart
+   const handleAddToCart = async (productId, quantity) => {
+     const item = await commerce.cart.add(productId, quantity);
+     return setCart(item.cart);
+  };
+
   const values = {
     fetchProducts,
-    fetchSingleItem
+    fetchSingleItem,
+    cart,
+    handleAddToCart
   }
 
 

@@ -19,9 +19,9 @@ function App() {
 
 
       </Switch>
-      <Footer/>
     </CommerceContext>
    </Router>
+  <Footer/>
 
    </>
   );

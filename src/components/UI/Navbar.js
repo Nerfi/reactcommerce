@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '@material-ui/core';
 import { ShoppingCart } from '@material-ui/icons';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import logo from './Images/commerceLogo.png';
+import {CommerceContextAPI} from '../commerce/commerce';
+
 
 
 
@@ -10,9 +12,13 @@ const NavBar = () => {
 
   const history = useHistory();
   const location = useLocation();
+ // const { cart } = useContext(CommerceContextAPI); //not working
+
+  const cart  = {
+    total_items: '5'
+  }
 
 
-  const totalItems = 5;
 
 
   return(
@@ -29,7 +35,7 @@ const NavBar = () => {
          <p style={{margin: '2px', position: 'relative', top: '10px'}}>OFFERS</p>
 
             <IconButton>
-            <Badge badgeContent={totalItems} color="secondary">
+            <Badge badgeContent={cart?.total_items} color="secondary">
               <ShoppingCart />
               </Badge>
          </IconButton>
