@@ -5,11 +5,13 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Footer from './components/UI/Footer';
 import {CommerceContext} from './components/commerce/commerce';
 import SingleItem from './components/UI/SingleItem';
+import AuthContext  from  './components/AuthContext/AuthContext';
 
 function App() {
   return (
    <>
    <Router>
+   <AuthContext>
      <NavBar/>
    <CommerceContext>
 
@@ -20,6 +22,7 @@ function App() {
 
       </Switch>
     </CommerceContext>
+    </AuthContext>
    </Router>
   <Footer/>
 
