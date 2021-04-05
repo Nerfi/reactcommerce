@@ -7,6 +7,9 @@ import {CommerceContext} from './components/commerce/commerce';
 import SingleItem from './components/UI/SingleItem';
 import {UserAuthContext}  from  './components/AuthContext/AuthContext';
 import Login from './components/UI/Login';
+import SignUp from './components/UI/SignUp';
+
+
 
 function App() {
   return (
@@ -20,6 +23,7 @@ function App() {
       <Route exact path="/" component={LandingPage}></Route>
      <Route  path="/item/:id" component={SingleItem}></Route>
      <Route  path="/login" component={Login}></Route>
+     <Route  path="/signup" component={SignUp}></Route>
 
 
 

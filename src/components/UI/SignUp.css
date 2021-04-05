@@ -1,0 +1,25 @@
+.signupComponent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+
+}
+
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-style: solid;
+  margin-top: 70px;
+}
+
+.signUpTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+}
