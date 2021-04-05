@@ -9,6 +9,16 @@ const UserAuthContext = (props) => {
 
   const [user, setUser] = useState();
 
+
+  const signUp = (email, password) => {
+      return firebase.auth().createUserWithEmailAndPassword(email, password)
+    };
+
+    const login = (email, password) => {
+      return firebase.auth().signInWithEmailAndPassword(email, password)
+    };
+
+
   useEffect(() => {
     return firebase.auth().onAuthStateChanged((user) => {
       setUser(user);
@@ -18,7 +28,9 @@ const UserAuthContext = (props) => {
 
 
   const value = {
-    user
+    user,
+    login,
+    signUp
   }
     return(
       <UserContext.Provider value={value}>
@@ -28,4 +40,4 @@ const UserAuthContext = (props) => {
 
 };
 
-export default UserAuthContext;
+export { UserAuthContext, UserContext};

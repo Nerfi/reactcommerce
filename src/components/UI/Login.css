@@ -1,0 +1,26 @@
+.form {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.formContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-style: solid;
+  margin-top: 50px;
+
+}
+
+.formContent > input {
+  height: 80px;
+}
+
+
+.loginTitle{
+  display: flex;
+  justify-content: center;
+}

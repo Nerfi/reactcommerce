@@ -30,7 +30,7 @@ const NavBar = () => {
        </Typography>
 
          <div style={{display: 'flex', position: 'relative', left: '9.5rem'}}>
-         <p style={{margin: '2px', position: 'relative', top: '10px'}}>LOGIN</p>
+         <a  href='/login' style={{margin: '2px', position: 'relative', top: '10px'}}>LOGIN</a>
 
          <p style={{margin: '2px', position: 'relative', top: '10px'}}>OFFERS</p>
 
