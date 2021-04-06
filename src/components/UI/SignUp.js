@@ -12,15 +12,16 @@ const SignUp = () => {
   const [error, setError] = useState(null);
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
+  const history = useHistory();
   //context
   const {signUp} = useContext(UserContext);
 
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async  (e) => {
     e.preventDefault();
 
-    if (!name) return setError('There is no name, please select one');
+    if (!name) return;
 
     if(password !== repeatPassword) {
       return setError('Passwords do not match!')
@@ -28,6 +29,15 @@ const SignUp = () => {
 
     try {
       setError(null)
+      const signedUpUser = await signUp(email, password)
+
+      //creating user doc in firebase DB
+
+        firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).set({
+          email: email,
+          name: name
+        })
+
 
     }catch(e) {
       setError(e.message)
@@ -45,11 +55,11 @@ const SignUp = () => {
      <label className="label" required>Name</label>
       <input type="text" placeholder="Name" onChange={(e) => setName(e.target.value)}/>
       <label className="label">Email</label>
-      <input type="email" placeholder="Email"/>
+      <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
       <label className="label" >Password</label>
       <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
-      <label className="label" onChange={(e) => setRepeatPassword(e.target.value)} >Repeat Password</label>
-      <input type="password" placeholder="Repeat password" />
+      <label className="label">Repeat Password</label>
+      <input type="password" placeholder="Repeat password" onChange={(e) => setRepeatPassword(e.target.value)}/>
       <button type="submit">Register</button>
     </form>
 

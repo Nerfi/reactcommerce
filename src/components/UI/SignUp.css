@@ -12,11 +12,18 @@
   justify-content: center;
   border-style: solid;
   margin-top: 70px;
+  width: 45.3vh;
+  height: 350px;
+
+
+
 }
 
 .signUpTitle {
   display: flex;
   justify-content: center;
+
+
 }
 
 .label {
