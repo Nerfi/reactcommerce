@@ -4,6 +4,8 @@ import { ShoppingCart } from '@material-ui/icons';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import logo from './Images/commerceLogo.png';
 import {CommerceContextAPI} from '../commerce/commerce';
+import {UserContext} from '../AuthContext/AuthContext';
+
 
 
 
@@ -11,14 +13,13 @@ import {CommerceContextAPI} from '../commerce/commerce';
 const NavBar = () => {
 
   const history = useHistory();
+  const {user,logOutUser} = useContext(UserContext);
   const location = useLocation();
  // const { cart } = useContext(CommerceContextAPI); //not working
 
   const cart  = {
     total_items: 8
   }
-
-
 
 
   return(
@@ -30,8 +31,10 @@ const NavBar = () => {
        </Typography>
 
          <div style={{display: 'flex', position: 'relative', left: '9.5rem'}}>
+         {
+          user ?   <a  href='/' onClick={() => logOutUser()} style={{margin: '2px', position: 'relative', top: '10px'}}>LOG-OUT</a> :  <a  href="/login" style={{margin: '2px', position: 'relative', top: '10px'}}>LOGIN</a>
+         }
 
-         <a  href='/login' style={{margin: '2px', position: 'relative', top: '10px'}}>LOGIN</a>
 
          <p style={{margin: '2px', position: 'relative', top: '10px'}}>OFFERS</p>
 

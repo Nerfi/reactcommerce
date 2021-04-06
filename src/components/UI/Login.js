@@ -9,7 +9,7 @@ const LoginComponent = () => {
   const [email, setEmial] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const {login} = useContext(UserContext);
+  const {login, resetPassword} = useContext(UserContext);
   const history = useHistory();
 
   const handleSubmit = async (e) => {
@@ -39,6 +39,7 @@ const LoginComponent = () => {
        <input type="email" placeholder="email" required onChange={(e) => setEmial(e.target.value)}/>
        <input type="password" placeholder="Password" required onChange={(e) => setPassword(e.target.value)}/>
        <button type="submit">Submit</button>
+       <a href="/reset/password">Forgot Paswword ?</a>
       </form>
     </div>
 

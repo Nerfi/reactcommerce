@@ -28,15 +28,16 @@ const SignUp = () => {
     }
 
     try {
+
       setError(null)
       const signedUpUser = await signUp(email, password)
 
       //creating user doc in firebase DB
-
         firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).set({
           email: email,
           name: name
         })
+        history.push("/");
 
 
     }catch(e) {

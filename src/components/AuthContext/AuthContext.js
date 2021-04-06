@@ -18,6 +18,12 @@ const UserAuthContext = (props) => {
       return firebase.auth().signInWithEmailAndPassword(email, password)
     };
 
+  const logOutUser = () => firebase.auth().signOut();
+
+  const resetPassword = (email) => {
+    return firebase.auth().sendPasswordResetEmail(email);
+  }
+
 
   useEffect(() => {
     return firebase.auth().onAuthStateChanged((user) => {
@@ -30,7 +36,9 @@ const UserAuthContext = (props) => {
   const value = {
     user,
     login,
-    signUp
+    signUp,
+    logOutUser,
+    resetPassword
   }
     return(
       <UserContext.Provider value={value}>

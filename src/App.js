@@ -8,6 +8,7 @@ import SingleItem from './components/UI/SingleItem';
 import {UserAuthContext}  from  './components/AuthContext/AuthContext';
 import Login from './components/UI/Login';
 import SignUp from './components/UI/SignUp';
+import ResetPassword from './components/UI/ResetPassword';
 
 
 
@@ -24,6 +25,7 @@ function App() {
      <Route  path="/item/:id" component={SingleItem}></Route>
      <Route  path="/login" component={Login}></Route>
      <Route  path="/signup" component={SignUp}></Route>
+     <Route  path="/reset/password" component={ResetPassword}></Route>
 
 
 
