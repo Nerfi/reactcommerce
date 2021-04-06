@@ -33,7 +33,7 @@ const ResetPassword = () => {
     <form onSubmit={handleSubmit} className="resetForm">
           <label> Email</label>
           <input type="email" placeholder="Email to send you link" onChange={(e) => setNewEmail(e.target.value)}/>
-          <button>Reset Password</button>
+          <button type="submit">Reset Password</button>
         </form>
     </div>
     </>
