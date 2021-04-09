@@ -9,7 +9,7 @@ import {UserAuthContext}  from  './components/AuthContext/AuthContext';
 import Login from './components/UI/Login';
 import SignUp from './components/UI/SignUp';
 import ResetPassword from './components/UI/ResetPassword';
-
+import UpdateUserData from './components/UI/UpdateUserData';
 
 
 function App() {
@@ -26,6 +26,8 @@ function App() {
      <Route  path="/login" component={Login}></Route>
      <Route  path="/signup" component={SignUp}></Route>
      <Route  path="/reset/password" component={ResetPassword}></Route>
+   {/* this route needs to be protected */}
+      <Route  path="/update/user" component={UpdateUserData}></Route>
 
 
 
