@@ -19,6 +19,12 @@ const CommerceContext = (props) =>{
     return commerce.products.list();
   };
 
+   //fetching categories
+  const fetchCategories =  () => {
+   return  commerce.products.list({category_slug: ['mas-vendidos']});
+
+  };
+
   const fetchSingleItem = (itemId) => {
    return commerce.products.retrieve(itemId);
 
@@ -26,10 +32,9 @@ const CommerceContext = (props) =>{
 
 
   //creating a cart
-  const fetchCart = async () => {
+   const fetchCart = async () => {
     return setCart(await commerce.cart.retrieve());
   };
-
 
 
     //handle add to cart
@@ -47,7 +52,8 @@ const CommerceContext = (props) =>{
     fetchProducts,
     fetchSingleItem,
     cart,
-    handleAddToCart
+    handleAddToCart,
+    fetchCategories
   }
 
 

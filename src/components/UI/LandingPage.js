@@ -2,9 +2,10 @@ import React, {useState, useEffect, useContext} from 'react';
 import './LandingPage.css';
 import { Typography, Button, Card, CardActions, CardContent, CardMedia,CssBaseline } from '@material-ui/core';
 import Collection from './Collection';
-import WomenSection from './WomenSection';
+import MasVendidos from './MasVendidos';
 import {CommerceContextAPI} from '../commerce/commerce';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import {Link} from 'react-router-dom';
 
 const LandingPage = () => {
   const [items, setItems] = useState([]);
@@ -57,14 +58,14 @@ const LandingPage = () => {
               <div style={{display: 'flex', margin: '10px', padding: '10px'}}>
                 <h3 >Add To Cart <ArrowForwardIcon style={{position: 'relative', top: '5.5px'}}/> </h3>
                 </div>
-                <Button variant="contained" type="button" color="secondary" onClick={""/*() => handleRemoveFromCart(item.id)*/}>See Product</Button>
+                <Button component={Link} to={`item/${item.id}`}  variant="contained" type="button" color="secondary" onClick={""/*() => handleRemoveFromCart(item.id)*/}>See Product</Button>
               </CardActions>
            </Card>
 
           })}
         </div>
         <Collection/>
-        <WomenSection/>
+        <MasVendidos/>
 
     </div>
   </>

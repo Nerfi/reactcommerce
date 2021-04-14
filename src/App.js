@@ -17,8 +17,8 @@ function App() {
    <>
    <Router>
    <UserAuthContext>
-     <NavBar/>
    <CommerceContext>
+     <NavBar/>
 
       <Switch>
       <Route exact path="/" component={LandingPage}></Route>

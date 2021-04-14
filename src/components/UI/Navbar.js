@@ -15,12 +15,7 @@ const NavBar = () => {
   const history = useHistory();
   const {user,logOutUser} = useContext(UserContext);
   const location = useLocation();
- // const { cart } = useContext(CommerceContextAPI); //not working
-
-  const cart  = {
-    total_items: 8
-  }
-
+  const { cart } = useContext(CommerceContextAPI);
 
   return(
      <>

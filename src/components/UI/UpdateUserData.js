@@ -20,8 +20,6 @@ const {
  updateUserName
 } = useContext(UserContext);
 
-console.log({user})
-
 
 //const new function in order to update the user data
 //this is not an async function because we are resolving all the promises this component has in one place , Promise.all(promises); check docs for more info
