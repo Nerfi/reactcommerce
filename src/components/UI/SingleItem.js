@@ -33,7 +33,7 @@ const SingleItem = () => {
 
   return(
     <>
-    <div className="singleItemContainer" style={{marginTop: '200px'}}>
+    <div className="singleItemContainer" style={{marginTop: '20px'}}>
 
     <Card className="root">
       <CardMedia className="media" image={singleItem?.media?.source} title={singleItem.name} />
