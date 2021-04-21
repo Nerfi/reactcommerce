@@ -43,6 +43,25 @@ const CommerceContext = (props) =>{
      return setCart(item.cart);
   };
 
+  const refreshCart = async () => {
+    const newCart = await commerce.cart.refresh();
+
+    setCart(newCart);
+  };
+
+
+  //creating a function in order to create a token and process the payment
+
+  const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
+    try {
+      const incomingOrder = await commerce.checkout.capture(checkoutTokenId, newOrder);
+      setOrder(incomingOrder);
+      refreshCart();
+    } catch(e) {
+      setError(e.data.error.message);
+    }
+  }
+
 
   useEffect(() => {
     fetchCart();
@@ -53,7 +72,10 @@ const CommerceContext = (props) =>{
     fetchSingleItem,
     cart,
     handleAddToCart,
-    fetchCategories
+    fetchCategories,
+    commerce,
+    order,
+    handleCaptureCheckout
   }
 
 
