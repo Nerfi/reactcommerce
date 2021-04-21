@@ -46,6 +46,9 @@ useEffect(() => {
   }, [cart]);
 
 
+console.log({checkoutToken}, 'checkout') //it does exist
+
+
     let Confirmation = () => (order.customer ? (
     <>
       <div>
