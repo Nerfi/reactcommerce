@@ -79,14 +79,10 @@ useEffect(() => {
     nextStep();
   };
 
-/*
-const Form = () => (activeStep === 0 ?
- <AddressForm checkoutToken={checkoutToken} nextStep={nextStep} setShippingData={setShippingData} next={test} />
-  : <PaymentForm checkoutToken={checkoutToken} nextStep={nextStep} backStep={backStep} shippingData={shippingData}  />);
 
-*/
+const Form = () => (activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} nextStep={nextStep} setShippingData={setShippingData} next={test} />
+    : <PaymentForm checkoutToken={checkoutToken} nextStep={nextStep} backStep={backStep} shippingData={shippingData}  />);
 
-const Form = () => activeStep === 0 ?  <PaymentForm checkoutToken={checkoutToken} nextStep={nextStep} backStep={backStep} shippingData={shippingData}  /> : 'not working'
 
 
 
