@@ -33,7 +33,11 @@ const MasVendidos = () => {
   return(
     <>
     {error && error}
-    {masVendidos?.map(item => {
+    <div className="masVendidosHeaderContainer">
+     <h1 style={{display: 'flex', justifyContent: 'center', marginTop: '50px', padding: '30px'}}>Mas Vendidos</h1>
+     <a href="/mas/vendidos" style={{display: 'flex', justifyContent: 'flex-end'}}> see all </a>
+    </div>
+    {masVendidos?.slice(0,4).map(item => {
      return <Product key={item.id} product={item}/>
 
     })}

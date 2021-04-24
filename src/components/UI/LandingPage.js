@@ -65,6 +65,7 @@ const LandingPage = () => {
           })}
         </div>
         <Collection/>
+
         <MasVendidos/>
 
     </div>

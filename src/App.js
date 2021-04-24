@@ -11,6 +11,7 @@ import SignUp from './components/UI/SignUp';
 import ResetPassword from './components/UI/ResetPassword';
 import UpdateUserData from './components/UI/UpdateUserData';
 import Checkout from './components/checkout/Checkout';
+import Ofertas from './components/UI/Ofertas';
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
      <Route  path="/signup" component={SignUp}></Route>
      <Route  path="/checkout" component={Checkout}></Route>
      <Route  path="/reset/password" component={ResetPassword}></Route>
+    <Route  path="/mas/vendidos" component={Ofertas}></Route>
+
    {/* this route needs to be protected */}
       <Route  path="/update/user" component={UpdateUserData}></Route>
 

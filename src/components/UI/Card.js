@@ -19,7 +19,7 @@ const Product = ({ product }) => {
       <CardContent>
         <div className={classes.cardContent}>
           <Typography gutterBottom variant="h5" component="h2" className={classes.typography}>
-             <Link  to={`item/${product.id}`}>{product.name}</Link>
+             <Link  to={`item/${product.id}`} style={{textDecoration: 'none', color: 'black'}}>{product.name}</Link>
           </Typography>
           <Typography gutterBottom variant="h5" component="h2">
             ${product?.price.formatted }
