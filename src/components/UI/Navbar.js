@@ -33,7 +33,7 @@ const NavBar = () => {
 
          <p style={{margin: '2px', position: 'relative', top: '10px'}}>OFFERS</p>
 
-            <IconButton>
+            <IconButton component={Link} to="/cart">
             <Badge badgeContent={cart?.total_items} color="secondary">
               <ShoppingCart />
               </Badge>
