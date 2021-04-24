@@ -78,7 +78,7 @@ const AddressForm = ({checkoutToken, next}) => {
     if(shippingSubdivisions) fetchShippingOptions(checkoutToken.id,shippingCountry, shippingSubdivisions)
   },[shippingSubdivisions])
 
-
+console.log({shippingCountries}) //undefined
   return(
     <>
     <Typography variant="h6" gutterBottom>Shipping address</Typography>
